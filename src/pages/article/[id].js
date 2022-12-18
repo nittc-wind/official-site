@@ -1,11 +1,12 @@
 import { client } from "../../libs/client";
+import Layout from "../../components/Layout";
 import styles from '../../styles/Home.module.scss';
 
 export default function ArticleId({ article }) {
   return (
+    <Layout pageTitle={article.title}>
     <main className={styles.main}>
-      <h1 className={styles.title}>{article.title}</h1>
-      <p className={styles.publishedAt}>{article.publishedAt}</p>
+      <h1 className="text-xl font-bold">{article.title}</h1>
       <div
         dangerouslySetInnerHTML={{
           __html: `${article.content}`,
@@ -13,6 +14,7 @@ export default function ArticleId({ article }) {
         className={styles.post}
       />
     </main>
+    </Layout>
   );
 }
 
