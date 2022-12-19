@@ -1,10 +1,13 @@
 import { client } from "../../libs/client";
 import Layout from "../../components/Layout";
 import styles from '../../styles/Home.module.scss';
+import Seo from "../../components/Seo";
 
 export default function ArticleId({ article }) {
   return (
-    <Layout pageTitle={article.title}>
+    <Layout >
+    <Seo pageTitle={article.title}
+      pageImg={article.eye_catch} />
     <main className={styles.main}>
       <h1 className="text-xl font-bold">{article.title}</h1>
       <div
