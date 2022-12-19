@@ -9,12 +9,13 @@ const Seo = ({
   pageImgHeight
 }) => {
   const defaultTitle = '豊田高専吹奏楽部'
-  const defaultDescription = 'demo'
+  const defaultDescription = '豊田高専吹奏楽部です'
+  const defaultImg = "https://nittc-windor.web.app/eye_catch.jpg"
 
   const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle
   const description = pageDescription ? pageDescription : defaultDescription
   const url = pagePath
-  const imgUrl = "https://nittc-windor.web.app/eye_catch.jpg"
+  const imgUrl = pageImg ? pageImg : defaultImg
   const imgWidth = pageImgWidth ? pageImgWidth : 1280
   const imgHeight = pageImgHeight ? pageImgHeight : 640
 
@@ -34,8 +35,8 @@ const Seo = ({
       <meta name='twitter:card' content='summary_large_image' />
       <meta name="twitter:site" content="@NittcWind" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content="豊田高専吹奏楽部です" />
-      <meta name="twitter:image" content="https://nittc-windor.web.app/eye_catch.jpg" />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imgUrl} />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
         href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"
