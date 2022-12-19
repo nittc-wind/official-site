@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import { client } from "../libs/client";
 import Link from "next/link";
+import Seo from '../components/Seo';
 
 const Index = ({ article }) => {
   return (

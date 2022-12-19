@@ -7,7 +7,7 @@ export default function ArticleId({ article }) {
   return (
     <Layout >
     <Seo pageTitle={article.title}
-      pageImg={article.eye_catch} />
+      pageImg={article.eye_catch.url} />
     <main className={styles.main}>
       <h1 className="text-xl font-bold">{article.title}</h1>
       <div
