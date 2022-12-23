@@ -1,0 +1,26 @@
+name: Build and Deploy Next.js app
+
+on:
+  push:
+    branches: [ main ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - name: Install NPM packages
+        run: npm ci
+      - name: Build and Export Next.js app
+        run: npm run build
+        env:
+          MICRO_CMS_API_KEY: ${{ secrets.MICRO_CMS_API_KEY }}
+      - name: deploy to firebase hosting
+        run: firebase deploy --token $FIREBASE_TOKEN
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
