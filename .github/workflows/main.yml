@@ -1,6 +1,6 @@
 name: Build and Deploy Next.js to Firebase hosting
 
-on
+on:
   push:
     branches: [ main ]
     
