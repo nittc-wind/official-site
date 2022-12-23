@@ -39,3 +39,19 @@ jobs:
         with:
           name: nextjs-out
           path: ./out
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: nextjs-out
+      - name: deploy to firebase hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with: 
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NITTC_WINDOR }}'
+          projectId: nittc-windor
