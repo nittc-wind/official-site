@@ -48,13 +48,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: nextjs-out
+      - name: Display downloaded directory
         run: |
           ls
           mv ./nextjs-out ./out
-      - name: deploy to firebase hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with: 
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NITTC_WINDOR }}'
-          projectId: nittc-windor
-          channelId: 'live'
+          ls
