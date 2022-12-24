@@ -27,7 +27,6 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-
       - name: Install NPM packages
         run: npm ci
       - name: run "next build && next export"
@@ -45,13 +44,20 @@ jobs:
     needs: build
     steps: 
       - uses: actions/checkout@v2
+      - name: create out directory
+        run: mkdir out
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
           name: nextjs-out
+          path: ./out
+      - name: Display downloaded directory
+        run: |
+          ls
       - name: deploy to firebase hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with: 
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NITTC_WINDOR }}'
           projectId: nittc-windor
+          channelId: 'live'
