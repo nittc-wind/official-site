@@ -15,9 +15,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: "16"
 
-      - name: Restore cache node_modules
+      - name: Restore cache
         uses: actions/cache@v3
         with:
           path: |
@@ -29,7 +29,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install NPM packages
         run: npm ci
-      - name: run "next build && next export"
+      - name: Build and Export Next.js app
         run: npm run build
         env:
           MICRO_CMS_API_KEY: ${{ secrets.MICRO_CMS_API_KEY }}
