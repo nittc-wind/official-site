@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import { client } from "../libs/client";
 import Link from "next/link";
 import Seo from '../components/Seo';
+import Item from '../components/Item';
 
 const Index = ({ article }) => {
   return (
@@ -13,7 +14,7 @@ const Index = ({ article }) => {
             {article.map((article) => (
               <li key={article.id}>
                 <Link href={`/article/${article.id}`}>
-                    <p>{article.title}</p>
+                  <Item article={article} />
                 </Link>
               </li>
             ))}
