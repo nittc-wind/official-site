@@ -1,12 +1,12 @@
 export default function Item({article}) {
   return (
-    <div className="w-80">
+    <div className="w-80 border-solid	border-2">
       <img 
         src={article.eye_catch.url}
         alt="サムネイル"
       />
       <h3 className="font-bold">{article.title}</h3>
-      <p>{article.updatedAt}</p>
+      <p>{article.updatedAt.slice(0, 10)}</p>
     </div>
   )
 }
