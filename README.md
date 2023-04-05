@@ -10,7 +10,12 @@
 
 ## Getting Started
 
-First, run the development server:
+First, prepare .env file and set API key.
+```sh
+touch .env
+echo "MICRO_CMS_API_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxx" >> .env
+```
+And then run the development server:
 
 ```sh
 npm run dev
