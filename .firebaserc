@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "nittc-windor"
-  }
+  },
+  "targets": {
+    "nittc-windor": {
+      "hosting": {
+        "main": [
+          "nittc-wind"
+        ],
+        "old": [
+          "nittc-windor"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

@@ -35,6 +35,8 @@ jobs:
         run: npm run build
         env:
           MICRO_CMS_API_KEY: ${{ secrets.MICRO_CMS_API_KEY }}
+          NEXT_PUBLIC_CAL_API_KEY: ${{ secrets.NEXT_PUBLIC_CAL_API_KEY }}
+          NEXT_PUBLIC_CAL_ID: ${{ secrets.NEXT_PUBLIC_CAL_ID }}
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
