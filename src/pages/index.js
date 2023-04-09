@@ -3,6 +3,7 @@ import { client } from "../libs/client";
 import Link from "next/link";
 import Seo from '../components/Seo';
 import Item from '../components/Item';
+import Calendar from '../components/Calendar';
 
 const Index = ({ article }) => {
   return (
@@ -20,6 +21,8 @@ const Index = ({ article }) => {
             ))}
           </ul>
         </div>
+        <h2 className='text-xl font-bold'>練習予定</h2>
+        <Calendar />
       </Layout>
   )
 }
