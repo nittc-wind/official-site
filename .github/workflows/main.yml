@@ -65,3 +65,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NITTC_WINDOR }}'
           projectId: nittc-windor
           channelId: 'live'
+          target: 'main'
