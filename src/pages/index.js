@@ -9,19 +9,17 @@ const Index = ({ article }) => {
   return (
       <Layout>
         <Seo pageTitle="豊田高専吹奏楽部" />
-        <h2 className='text-xl font-bold'>お知らせ</h2>
+        <h2 className='text-xl font-bold my-5'>お知らせ</h2>
         <div>
-          <ul>
+          <ul className='md:flex'>
             {article.map((article) => (
-              <li key={article.id}>
-                <Link href={`/article/${article.id}`}>
+              <li key={article.id} className='mb-2 md:m-2'>
                   <Item article={article} />
-                </Link>
               </li>
             ))}
           </ul>
         </div>
-        <h2 className='text-xl font-bold'>練習予定</h2>
+        <h2 className='text-xl font-bold my-5'>練習予定</h2>
         <Calendar />
       </Layout>
   )
