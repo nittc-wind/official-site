@@ -13,6 +13,7 @@
     "@fullcalendar/core": "^6.1.5",
     "@fullcalendar/daygrid": "^6.1.5",
     "@fullcalendar/google-calendar": "^6.1.5",
+    "@fullcalendar/list": "^6.1.5",
     "@fullcalendar/react": "^6.1.5",
     "microcms-js-sdk": "^2.3.2",
     "next": "^13.3.0",
