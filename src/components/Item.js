@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Item({article}) {
   return (
     <Link href={`/article/${article.id}`}>
     <div className="w-80 md:w-64 border-solid	border-2">
-      <img 
+      <Image
+        width={320} height={160}
         src={article.eye_catch.url}
         alt="サムネイル"
       />
