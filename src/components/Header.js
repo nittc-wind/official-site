@@ -1,10 +1,12 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
 export default function Header() {
   return (
     <header className="">
       <h1>
         <Link href="/">
-            <img 
+          <Image width={450} height={80} priority={true}
                 className='sm:max-w-md'
                 src="/icon.color.svg" alt='豊田高専吹奏楽部' />
         </Link>
