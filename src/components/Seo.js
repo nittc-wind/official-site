@@ -38,10 +38,6 @@ const Seo = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imgUrl} />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"
-        rel="stylesheet"
-      />
       <link rel="canonical" href={url} />
       <link rel='icon' href='/favicon.ico' />
     </Head>
