@@ -1,9 +1,9 @@
 import Layout from '../components/Layout'
 import { client } from "../libs/client";
-import Link from "next/link";
 import Seo from '../components/Seo';
 import Item from '../components/Item';
 import Calendar from '../components/Calendar';
+import Social from '../components/Social';
 
 const Index = ({ article }) => {
   return (
@@ -21,6 +21,8 @@ const Index = ({ article }) => {
         </div>
         <h2 className='text-xl font-bold my-5'>練習予定</h2>
         <Calendar />
+        <h2 className='text-xl font-bold my-5'>コンタクト</h2>
+        <Social />
       </Layout>
   )
 }
