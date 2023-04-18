@@ -24,7 +24,6 @@ const Index = ({ article }) => {
         </div>
         <h2 className='text-xl font-bold my-5'>練習予定</h2>
         <Calendar />
-        <h2 className='text-xl font-bold my-5'>コンタクト</h2>
         <p>部員向け</p>
         <Link 
           className='underline text-blue-600'
@@ -33,6 +32,7 @@ const Index = ({ article }) => {
         <Link 
           className='underline text-blue-600'
           href={urlICal}>iOS標準カレンダーはこちら</Link>
+        <h2 className='text-xl font-bold my-5'>コンタクト</h2>
         <Social />
       </Layout>
   )
