@@ -4,6 +4,7 @@ import Seo from '../components/Seo';
 import Item from '../components/Item';
 import Calendar from '../components/Calendar';
 import Social from '../components/Social';
+import Link from 'next/link';
 
 const Index = ({ article }) => {
   const urlGoogleCal = "https://calendar.google.com/calendar/embed?src=d94109cf325d4d56e437d3e81e5ce206311f552bf1967da2ccf92653897e6c29%40group.calendar.google.com&ctz=Asia%2FTokyo";
