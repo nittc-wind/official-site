@@ -8,7 +8,7 @@ export default function Calendar() {
     <FullCalendar
         plugins={[ dayGridPlugin, googleCalendarPlugin, listPlugin]}
         locale="ja"
-        initialView="dayGridMonth"
+        initialView="listWeek"
         googleCalendarApiKey={process.env.NEXT_PUBLIC_CAL_API_KEY}
         headerToolbar={{
           left: 'prev,next today',
@@ -18,7 +18,7 @@ export default function Calendar() {
         buttonText={{
           today: "今日",
           month: "月",
-          list: "週（リスト表示）"
+          list: "週"
         }}
         eventSources={[
         {
