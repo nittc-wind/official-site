@@ -1,10 +1,10 @@
 name: Build and Deploy Next.js to Firebase hosting
 
-on:
-  push:
-    branches: [ main ]
-  repository_dispatch:
-    types: [update_post]
+on: [workflow_dispatch]
+#  push:
+#    branches: [ main ]
+#  repository_dispatch:
+#    types: [update_post]
     
 jobs:
   build:
