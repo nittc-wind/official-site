@@ -14,14 +14,18 @@ First, prepare .env file and set API key.
 ```sh
 touch .env
 echo "MICRO_CMS_API_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxx" >> .env
+echo "NEXT_PUBLIC_CAL_ID = [calendar_id]" >> .env
+echo "NEXT_PUBLIC_CAL_API_KEY = [calendar_api_key]" >> .env
 ```
+`calendar_id`は、「マイカレンダーの設定」>「カレンダーの統合」>「カレンダーID」より
+`calendar_api_key`は、 https://console.cloud.google.com/apis/credentials より
 And then run the development server:
 
 ```sh
 npm run dev
 ```
 
-## Setup 
+## Setup
 
 You must install `Firebase CLI`
 ```sh
