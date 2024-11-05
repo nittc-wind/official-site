@@ -5,22 +5,22 @@ on: [workflow_dispatch]
 #    branches: [ main ]
 #  repository_dispatch:
 #    types: [update_post]
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "22"
 
       - name: Restore cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             .next/cache
@@ -38,7 +38,7 @@ jobs:
           NEXT_PUBLIC_CAL_API_KEY: ${{ secrets.NEXT_PUBLIC_CAL_API_KEY }}
           NEXT_PUBLIC_CAL_ID: ${{ secrets.NEXT_PUBLIC_CAL_ID }}
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: nextjs-out
           path: ./out
@@ -46,12 +46,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    steps: 
-      - uses: actions/checkout@v2
+    steps:
+      - uses: actions/checkout@v4
       - name: create out directory
         run: mkdir out
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: nextjs-out
           path: ./out
@@ -60,7 +60,7 @@ jobs:
           ls
       - name: deploy to firebase hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
-        with: 
+        with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NITTC_WINDOR }}'
           projectId: nittc-windor
