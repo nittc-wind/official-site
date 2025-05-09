@@ -13,7 +13,7 @@
 First, prepare .env file and set API key.
 ```sh
 touch .env
-echo "MICRO_CMS_API_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxx" >> .env
+echo "MICRO_CMS_API_KEY = xxxxxxxxxxxxxxxxxxxxxxxxx" >> .env
 echo "NEXT_PUBLIC_CAL_ID = [calendar_id]" >> .env
 echo "NEXT_PUBLIC_CAL_API_KEY = [calendar_api_key]" >> .env
 ```
