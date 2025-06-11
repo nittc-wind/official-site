@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <Layout pagetitle = "コンタクト">
         <div>連絡はこちらから</div>
-            <p>32312@toyota.kosen-ac.jp</p>
+            <p>32104@toyota.kosen-ac.jp</p>
     </Layout>
   )
 }
