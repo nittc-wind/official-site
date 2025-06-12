@@ -3,10 +3,10 @@ import Layout from '../components/Layout'
 const About = () => {
   return (
     <Layout pageTitle="部活紹介">
-      <div class="intro">
+      <div intro>
         <p>こんにちは！豊田高専吹奏楽部です。</p> 
         <p>私たちの部活は現在36名で楽しく活動しています。</p>
-        <table className="hyou"border="1">
+        <table>
           <tr>
             <th></th>
             <th></th>
@@ -17,7 +17,7 @@ const About = () => {
           </tr>
           <tr>
             <td>所属部員数</td>
-            <td>36人</td>
+            <td>35人</td>
           </tr>
           <tr>
             <td>活動場所</td>
@@ -25,7 +25,7 @@ const About = () => {
           </tr>
           <tr>
             <td>活動時間</td>
-            <td>16:45-18:30（月~木）、09:00-16:30（土）</td>
+            <td>16:45-18:30（（月~木）、09:00-16:30（土）</td>
           </tr>
           <tr>
             <td>個人の負担</td>
