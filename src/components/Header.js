@@ -13,9 +13,9 @@ export default function Header() {
       <nav className='mt-2 flex justify-center'>
         <ul className='flex space-x-4'>
            <li className='hover:underline'><Link href="/about">部活紹介</Link></li> 
-           <li className='hover:underline'><Link href="/about">年間予定</Link></li>
+           <li className='hover:underline'><Link href="/annual">年間予定</Link></li>
            <li className='hover:underline'><Link href="/about">ニュース</Link></li>
-           <li className='hover:underline'><Link href="/about">コンタクト</Link></li>
+           <li className='hover:underline'><Link href="/contact">コンタクト</Link></li>
         </ul>
       </nav>
     </header>
