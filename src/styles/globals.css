@@ -18,6 +18,10 @@ a {
 * {
   box-sizing: border-box;
 }
+.hyou{
+  border-collapse: separate;
+  
+}
 /*
 @media (prefers-color-scheme: dark) {
   html {
