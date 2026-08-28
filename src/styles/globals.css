@@ -19,22 +19,23 @@ a {
   box-sizing: border-box;
 }
 table{
-  border-collapse: separate;
-  border: 2px solid #000;
+  border-collapse: collapse;
+  border: 1px solid #000;
 }
 
 /* 上下5px・左右10pxの余白*/
 table th {
   padding: 5px 20px;
-  border: 1px solid #3c3c3c;
-  border-collapse: collapse;
+  border: 1px solid #000;
+  background: #5c5c5c;
+  color: #fff;
+  font-weight: 500;
 }
 
 /* 上下左右15pxの余白*/
 table td {
   padding: 20px;
-  border: 1px solid #3c3c3c;
-  border-collapse: collapse;
+  border: 1px solid #000;
 }
 /*
 @media (prefers-color-scheme: dark) {

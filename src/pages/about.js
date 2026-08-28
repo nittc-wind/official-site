@@ -9,10 +9,6 @@ const About = () => {
         <table align='center'>
           <tbody>
             <tr>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
               <td>活動内容</td>
               <td>楽器の演奏</td>
             </tr>
