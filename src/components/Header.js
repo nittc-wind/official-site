@@ -12,6 +12,7 @@ export default function Header() {
       </h1>
       <nav className='mt-2 flex justify-center'>
         <ul className='flex space-x-4'>
+           <li className='hover:underline'><Link href="/">ホーム</Link></li> 
            <li className='hover:underline'><Link href="/about">部活紹介</Link></li> 
            <li className='hover:underline'><Link href="/annual">年間予定</Link></li>
            <li className='hover:underline'><Link href="/contact">コンタクト</Link></li>
